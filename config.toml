@@ -50,7 +50,7 @@ disableKinds = ["taxonomy", "term"]
 
     [[params.footer.social.links]]
     label = "Instagram"
-    url = "#"
+    url = "https://www.instagram.com/needell6210/"
     icon = "fa-instagram"
 
 
@@ -70,7 +70,7 @@ disableKinds = ["taxonomy", "term"]
 
     [params.footer.contact]
     hide = false # Set this to true if you don't want to have a contact form on your site
-    realEmail = "coeneedell@gmail.com"
+    realEmail = "needellk@gmail.com"
     headline = "Get in touch"
     buttonText = "Send"
     resetText = "Reset"

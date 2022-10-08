@@ -272,14 +272,19 @@
                                     item.el.attr("orig_name") +
                                     '"><i class="fa fa-download"></i></a></div>';
                             }
-                            caption += '<div class="caption-surround">';
+                            caption += '<div class="caption-surround" style="width: 100%">';
                             if( item.el.attr("phototitle") != "" ) {
                                 caption += "<h2>" + item.el.attr("phototitle") + "</h2>";
                             }
+                            caption += "<div style='display:flex; flex-direction:row; justify-content: space-between;'>"
                             if( item.el.attr("description") != "" ) {
                                 caption += '<div class="description">' +
                                     item.el.attr("description") + "</div>";
                             }
+                            if( item.el.attr("price") != "" ) {
+                                caption += "<small> $" + item.el.attr("price") + "</small>";
+                            }
+                            caption += "</div>"
                             let tax_elem = item.el.parent().find(".caption_tax");
                             if( tax_elem.length > 0 ) {
                                 caption += tax_elem[0].outerHTML;

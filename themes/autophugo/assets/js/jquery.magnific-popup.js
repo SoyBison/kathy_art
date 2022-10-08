@@ -1164,7 +1164,12 @@ $.magnificPopup.registerModule('image', {
 					'</figure>'+
 				'</div>',
 		cursor: 'mfp-zoom-out-cur',
-		titleSrc: 'title',
+		image: {
+			titleSrc: function(item){
+				console.log(item.el.attr("phototitle"));
+				return '<p>' + item.el.attr("phototitle") + '</p>'
+				},
+		},
 		verticalFit: true,
 		tError: '<a href="%url%">The image</a> could not be loaded.'
 	},

@@ -71,6 +71,7 @@
         {{- /* Build some scratch for upcoming search... */}}
         {{- $img_dat := newScratch }}
         {{- $img_dat.Set "alt" "" }}
+        {{- $img_dat.Set "price" "" }}
         {{- $img_dat.Set "description" "" }}
         {{- $img_dat.Set "weight" 0 }}
         {{- $img_dat.Set "taxonomies" dict }}
@@ -89,6 +90,7 @@
                 {{- $found := . }}
                 {{- if isset . "alt" }}{{ $img_dat.Set "alt" .alt }}{{ end }}
                 {{- if isset . "phototitle" }}{{ $img_dat.Set "phototitle" .phototitle }}{{ end }}
+                {{- if isset . "price" }}{{ $img_dat.Set "price" .price }}{{ end }}
                 {{- if isset . "description" }}{{ $img_dat.Set "description" .description }}{{ end }}
                 {{- if isset . "weight" }}{{ $img_dat.Set "weight" .weight }}{{ end }}
                 
@@ -126,6 +128,7 @@
         {{- /* Save off the image object */}}
         {{- $alt := $img_dat.Get "alt" }}
         {{- $phototitle := $img_dat.Get "phototitle" }}
+        {{- $price := $img_dat.Get "price" }}
         {{- $description := $img_dat.Get "description" }}
         {{- $weight := $img_dat.Get "weight" }}
         {{- $taxonomies := $img_dat.Get "taxonomies" }}
@@ -143,7 +146,7 @@
         {{- end }}
         {{- $full := $.Scratch.Get "full_resized" }}
 
-        {{- $new_img := dict "type" "image" "image" $elem_val "thumb" $thumb "full" $full "alt" $alt "phototitle" $phototitle "description" $description "weight" $weight  "orig" $elem_val "taxonomies" $taxonomies }}
+        {{- $new_img := dict "type" "image" "image" $elem_val "thumb" $thumb "full" $full "alt" $alt "phototitle" $phototitle "description" $description "price" $price "weight" $weight  "orig" $elem_val "taxonomies" $taxonomies }}
 
         {{- $images := $.Scratch.Get "images" }}
         {{- $images := $images | append $new_img }}

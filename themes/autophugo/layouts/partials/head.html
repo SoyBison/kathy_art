@@ -34,3 +34,4 @@
 {{- $user_css := resources.Get "css/user.css" -}}
 {{- $custom_css := slice $font_awesome $google_font $main_css $mg_pop_css $user_css | resources.Concat "css/custom.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $custom_css.RelPermalink }}" integrity="{{ $custom_css.Data.Integrity }}"/>
+<link rel="stylesheet" href="css/style.css">
