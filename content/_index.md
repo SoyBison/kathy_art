@@ -9,4 +9,10 @@ resources:
   phototitle: Forest ForestCreek
   description: Forest Creek
   price: 100
+- src: distant_garden.jpg
+  weight: 0
+  alt: distant garden
+  phototitle: Distant Garden
+  description: Distant Garden, a random picture off my computer.
+  price: 100000
 ---
