@@ -1,0 +1,43 @@
+baseURL: https://eternity.bora.sh # todo: change site url.
+title: Kathy Needell Fine Art
+defaultContentLanguage: 'en'
+theme: autophugo
+googleAnalytics: '' # todo: set your analytics id.
+
+params:
+  image: /images/banner.png
+  subtitle: 
+  copyright: All rights reserved. # todo: set your copyright type.
+  author: Coen D. Needell
+  dontShowSource: false # please, do not do this :)
+  portfolio:
+    columns:
+      desktop:
+        default: 3
+      mobile:
+        default: 2
+  socials:
+    # todo: add your social accounts.
+    - icon: 'far fa-envelope fa-lg'
+      url: 'mailto:eternity@bora.sh'
+      landing: true
+  # homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  work: ":filename/"
+
+# todo: uncomment menu.main array after you create contents.
+# menu:
+#   main:
+#     - name: work
+#       url: /work/
+#       weight: 1
