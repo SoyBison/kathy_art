@@ -8,4 +8,5 @@ resources:
   alt: ForestCreek
   phototitle: Forest ForestCreek
   description: Forest Creek
+  price: 100
 ---

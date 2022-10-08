@@ -90,4 +90,4 @@ disableKinds = ["taxonomy", "term"]
 
     # Copyright
     [params.footer.copyright]
-    name = "Your name"
+    name = "Coen D. Needell"

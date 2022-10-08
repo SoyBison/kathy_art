@@ -10,7 +10,7 @@
 <div class="flexrow">
 
     {{- $column_count := default 2 ($.Param "column_count") }}
-    {{- $downloadable := default true ($.Param "images_downloadable") }}
+    {{- $downloadable := default false ($.Param "images_downloadable") }}
     {{- $orig_download := default false ($.Param "images_downloadable_use_orig") }}
 
     {{- /* Initialize the column storage */}}
@@ -71,6 +71,7 @@
                             {{ printf "description='%s'" (.description | markdownify) | safeHTMLAttr }}
                             gallery_index="{{ .index }}"
                             id="{{ md5 $filename }}"
+                            price="{{ .price }}"
                             downloadable="{{ cond $downloadable "true" "false" }}"
                             {{- if $downloadable }}
                                 download_file="{{ (cond $orig_download .orig .full).RelPermalink }}"
